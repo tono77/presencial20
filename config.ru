@@ -23,13 +23,15 @@ class MiPrimeraWebApp
       	[202, { 'Content-Type' => 'text/html' }, ['<h1> INDEX </h1>']]
 
       when '/index'
-      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <title> Estás en el Index! </title>']]
+      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <h1> Estás en el Index! </h1>']]
 
       when '/otro'
-      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <title> Estás en otro landing! </title>']]
+      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <h1> Estás en otro landing! </h1>']]
 
       when '/url'
       	[404, { 'Content-Type' => 'text/html' }, [File.read("404.html")]]
+      else
+      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <h1> Estás en otra parte!! </h1>']]
     end
 
 
