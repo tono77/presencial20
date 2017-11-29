@@ -31,7 +31,7 @@ class MiPrimeraWebApp
       when '/url'
       	[404, { 'Content-Type' => 'text/html' }, [File.read("404.html")]]
       else
-      	[200, { 'Content-Type' => 'text/html' }, ['<meta charset="utf-8"> <h1> Estás en otra parte!! </h1>']]
+      	[200, { 'Content-Type' => 'text/html' }, ["<meta charset='utf-8'> <h1> Estás en #{env['REQUEST_PATH']} </h1>"]]
     end
 
 
